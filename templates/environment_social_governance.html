@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment, Social & Governance - QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Card Hover Effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Fade-In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Slide-Up Animation */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Zoom-In Animation */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .zoom-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Image Fade-in */
+        .image-fade-in {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .image-fade-in.visible {
+            opacity: 1;
+        }
+
+        /* Align Image Left and Right */
+        .image-left {
+            float: left;
+            width: 45%;
+            margin-right: 5%;
+        }
+
+        .image-right {
+            float: right;
+            width: 45%;
+            margin-left: 5%;
+        }
+
+        /* Clear Floats after Images */
+        .clear-both {
+            clear: both;
+        }
+
+        /* Animation for Section */
+        @keyframes fade-in-section {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-section {
+            animation: fade-in-section 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-green-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold animate-section">Environment, Social & Governance</h1>
+            <p class="mt-2 text-lg">Our commitment to environmental sustainability, social responsibility, and ethical governance practices.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Environmental Responsibility Section -->
+        <section class="fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8">Environmental Responsibility</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="image-fade-in">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731740163/freepik__expand__81985_hpb9nr.png" alt="Environmental Responsibility" class="image-left">
+                    <p class="text-lg text-gray-600 mb-4">
+                        At QuantumQuill, we are committed to reducing our environmental footprint and promoting sustainability across all of our operations. This involves minimizing waste, lowering carbon emissions, and adopting green technologies wherever possible.
+                    </p>
+                </div>
+                <ul class="list-disc pl-6 text-lg text-gray-600 mb-4">
+                    <li>Reducing energy consumption in offices and data centers</li>
+                    <li>Implementing recycling programs for electronic waste</li>
+                    <li>Adopting renewable energy sources</li>
+                    <li>Partnering with environmentally conscious vendors</li>
+                </ul>
+                <p class="text-lg text-gray-600 mb-4">
+                    We believe that technology can drive environmental sustainability and are dedicated to playing our part in protecting the planet.
+                </p>
+                <div class="clear-both"></div>
+            </div>
+        </section>
+
+        <!-- Social Responsibility Section -->
+        <section class="slide-up mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Social Responsibility</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="image-fade-in">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731740296/freepik__expand__41354_aj88fi.png" alt="Social Responsibility" class="image-right">
+                    <p class="text-lg text-gray-600 mb-4">
+                        We take our social responsibility seriously by fostering a diverse, inclusive, and supportive environment for our employees, clients, and communities. We are committed to creating positive impacts through technology and education.
+                    </p>
+                </div>
+                <ul class="list-disc pl-6 text-lg text-gray-600 mb-4">
+                    <li>Promoting diversity and inclusion in the workplace</li>
+                    <li>Supporting local communities through outreach programs</li>
+                    <li>Investing in education and STEM initiatives</li>
+                    <li>Ensuring employee well-being and work-life balance</li>
+                </ul>
+                <p class="text-lg text-gray-600 mb-4">
+                    We believe in the power of collaboration and making a positive difference in the world.
+                </p>
+                <div class="clear-both"></div>
+            </div>
+        </section>
+
+        <!-- Governance Principles Section -->
+        <section class="fade-in mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Governance Principles</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="image-fade-in">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731740416/freepik__upload__64578_kkjup8.jpg" alt="Governance Principles" class="image-left">
+                    <p class="text-lg text-gray-600 mb-4">
+                        At QuantumQuill, we uphold the highest standards of corporate governance, ensuring transparency, accountability, and ethical conduct in every aspect of our business. Our governance framework guides our actions and builds trust with stakeholders.
+                    </p>
+                </div>
+                <ul class="list-disc pl-6 text-lg text-gray-600 mb-4">
+                    <li>Maintaining transparency in financial reporting</li>
+                    <li>Ensuring compliance with legal and regulatory standards</li>
+                    <li>Establishing clear accountability structures within the company</li>
+                    <li>Adopting ethical decision-making practices</li>
+                </ul>
+                <p class="text-lg text-gray-600 mb-4">
+                    Our governance principles are designed to foster responsible growth and build a lasting legacy of trust and integrity.
+                </p>
+                <div class="clear-both"></div>
+            </div>
+        </section>
+
+        <!-- ESG Commitments Section -->
+        <section class="zoom-in mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Our ESG Commitments</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ESG Card 1 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h4 class="text-2xl font-semibold text-green-600 mb-2">Sustainability Goals</h4>
+                    <p class="text-gray-600 mb-4">
+                        We have set ambitious sustainability goals to reduce our environmental impact and promote eco-friendly technologies. 
+                    </p>
+                </div>
+
+                <!-- ESG Card 2 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h4 class="text-2xl font-semibold text-green-600 mb-2">Social Impact Initiatives</h4>
+                    <p class="text-gray-600 mb-4">
+                        Our social initiatives are focused on education, diversity, and community outreach, helping to improve lives through technology.
+                    </p>
+                </div>
+
+                <!-- ESG Card 3 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h4 class="text-2xl font-semibold text-green-600 mb-2">Ethical Governance</h4>
+                    <p class="text-gray-600 mb-4">
+                        Our commitment to ethical governance ensures that we maintain integrity, transparency, and accountability in all our business operations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-green-600 text-white py-12 mt-16 text-center">
+            <h3 class="text-2xl font-semibold mb-4">Join Our ESG Journey</h3>
+            <p class="mb-6">We are committed to making a positive impact. Explore career opportunities and become a part of our mission.</p>
+            <a href="#" class="bg-white text-green-600 px-6 py-3 rounded-full hover:bg-green-200 transition-all">Learn More</a>
+        </section>
+    </main>
+
+    <script>
+        // Intersection Observer for fade-in and other animations on scroll
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        const slideUpElements = document.querySelectorAll('.slide-up');
+        const zoomInElements = document.querySelectorAll('.zoom-in');
+        const imageFadeInElements = document.querySelectorAll('.image-fade-in');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1  // Reduced threshold to trigger earlier
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        fadeInElements.forEach(element => observer.observe(element));
+        slideUpElements.forEach(element => observer.observe(element));
+        zoomInElements.forEach(element => observer.observe(element));
+        imageFadeInElements.forEach(element => observer.observe(element));
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Paths - QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Animations */
+        .animate-slide-in {
+            animation: slide-in 0.8s ease-out;
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fade-up 0.8s ease-out;
+        }
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-indigo-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold">Career Paths</h1>
+            <p class="mt-2 text-lg">Explore your growth opportunities at QuantumQuill.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Introduction Section -->
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-center mb-8 animate-slide-in">Your Growth, Our Priority</h3>
+            <div class="bg-white p-8 rounded-lg shadow-md animate-fade-up">
+                <p class="text-gray-600 text-lg mb-4">
+                    At QuantumQuill, we believe in nurturing talent and fostering career growth. Our structured career paths
+                    are designed to help you achieve your professional aspirations while contributing to innovative projects.
+                </p>
+                <p class="text-gray-600">
+                    Whether you're a budding professional or an industry veteran, you'll find opportunities to thrive and excel in your role.
+                </p>
+            </div>
+        </section>
+
+        <!-- Career Path Stages -->
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-center mb-8 animate-slide-in">Career Stages at QuantumQuill</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Career Path Cards -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform animate-fade-up">
+                    <h4 class="text-xl font-bold mb-2">Entry Level</h4>
+                    <p class="text-gray-700">Perfect for recent graduates and junior professionals.</p>
+                    <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2">
+                        <li>Hands-on learning opportunities</li>
+                        <li>Mentorship from industry leaders</li>
+                        <li>Foundation-building experiences</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform animate-fade-up">
+                    <h4 class="text-xl font-bold mb-2">Mid-Level</h4>
+                    <p class="text-gray-700">For professionals ready to take on greater responsibility.</p>
+                    <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2">
+                        <li>Project leadership roles</li>
+                        <li>Skill enhancement programs</li>
+                        <li>Opportunities for cross-functional collaboration</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform animate-fade-up">
+                    <h4 class="text-xl font-bold mb-2">Senior Level</h4>
+                    <p class="text-gray-700">Ideal for seasoned professionals aiming for leadership.</p>
+                    <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2">
+                        <li>Strategic decision-making roles</li>
+                        <li>Opportunities to mentor and guide</li>
+                        <li>Participation in company-wide initiatives</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Support Section -->
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-center mb-8 animate-slide-in">How We Support Your Growth</h3>
+            <div class="bg-white p-8 rounded-lg shadow-md animate-fade-up">
+                <ul class="list-disc list-inside text-gray-600 space-y-4">
+                    <li>
+                        <strong>Comprehensive Training:</strong> Access to workshops, seminars, and online courses to enhance your skills.
+                    </li>
+                    <li>
+                        <strong>Mentorship Programs:</strong> Personalized guidance from experienced leaders in your domain.
+                    </li>
+                    <li>
+                        <strong>Goal-Oriented Evaluations:</strong> Regular reviews to track progress and identify growth opportunities.
+                    </li>
+                    <li>
+                        <strong>Leadership Development:</strong> Tailored programs to prepare you for leadership roles.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="mb-16 text-center">
+            <h3 class="text-3xl font-bold text-center mb-8 animate-slide-in">Ready to Take the Next Step?</h3>
+            <p class="text-gray-600 text-lg mb-4 animate-fade-up">
+                Join us at QuantumQuill and embark on a career journey like no other. Your potential is limitless, and we're here to help you unlock it.
+            </p>
+            <a href="/apply" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors animate-fade-up">Explore Opportunities</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

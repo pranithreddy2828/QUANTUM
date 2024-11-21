@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Social Responsibility - QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Card Hover Effect */
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Image Hover Effect */
+        .image-hover:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Hero Section Title Animation */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .zoom-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Fade-In Animation for Sections */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Slide-Up Animation */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Background Parallax Effect */
+        .parallax {
+            background-image: url('https://res.cloudinary.com/daj3h8fz7/image/upload/v1731314805/samples/cloudinary-group.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Button Hover Animation */
+        .btn-hover:hover {
+            background-color: #2d3748;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Fade-In Section for Cards */
+        .card-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .card-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframe for Fade-In Section */
+        @keyframes fade-in-section {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-section {
+            animation: fade-in-section 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <header class="bg-teal-600 text-white py-6 relative">
+        <div class="parallax">
+            <h1 class="text-4xl font-bold zoom-in animate-section">Corporate Social Responsibility</h1>
+            <p class="mt-2 text-lg zoom-in animate-section">Empowering communities and promoting positive change through our commitment to social responsibility.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- CSR Overview Section -->
+        <section class="fade-in mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Our CSR Commitment</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-lg text-gray-600">
+                        <p class="mb-4">
+                            At QuantumQuill, we believe that corporate responsibility goes beyond just business – it's about making a positive impact on society and the environment. Our CSR initiatives focus on giving back to the community, supporting education, and promoting ethical business practices.
+                        </p>
+                        <ul class="list-disc pl-6 text-lg text-gray-600 mb-4">
+                            <li>Supporting education initiatives and skill development</li>
+                            <li>Fostering local community development through outreach programs</li>
+                            <li>Providing resources for underprivileged groups and organizations</li>
+                            <li>Promoting environmental sustainability across industries</li>
+                        </ul>
+                        <p class="text-lg text-gray-600 mb-4">
+                            We are committed to creating a more equitable and sustainable future for all.
+                        </p>
+                    </div>
+                    <div class="image-hover bg-gray-200 p-4 rounded-lg">
+                        <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731739812/CSR_o9ld34.jpg" alt="CSR Image" class="w-500 h-100 object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSR Impact Section -->
+        <section class="slide-up mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CSR Card 1 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h4 class="text-2xl font-semibold text-teal-600 mb-2">Education Initiatives</h4>
+                    <p class="text-gray-600 mb-4">
+                        We believe in empowering individuals through education, providing scholarships, and supporting STEM initiatives that help shape future leaders.
+                    </p>
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731740163/freepik__expand__81985_hpb9nr.png" alt="Education" class="w-full h-48 object-cover rounded-lg image-hover">
+                </div>
+
+                <!-- CSR Card 2 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h4 class="text-2xl font-semibold text-teal-600 mb-2">Community Development</h4>
+                    <p class="text-gray-600 mb-4">
+                        QuantumQuill partners with local organizations to support underprivileged communities, creating opportunities for growth, health, and sustainability.
+                    </p>
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731740296/freepik__expand__41354_aj88fi.png" alt="Community Development" class="w-full h-48 object-cover rounded-lg image-hover">
+                </div>
+
+                <!-- CSR Card 3 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h4 class="text-2xl font-semibold text-teal-600 mb-2">Environmental Sustainability</h4>
+                    <p class="text-gray-600 mb-4">
+                        We are focused on reducing our carbon footprint by investing in renewable energy sources, reducing waste, and promoting sustainable practices across all sectors.
+                    </p>
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731740416/freepik__upload__64578_kkjup8.jpg" alt="Environmental Sustainability" class="w-full h-48 object-cover rounded-lg image-hover">
+                </div>
+            </div>
+        </section>
+
+        <!-- CSR Programs Section -->
+        <section class="fade-in mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Our CSR Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CSR Program 1 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-section">
+                    <h4 class="text-2xl font-semibold text-teal-600 mb-2">Youth Empowerment</h4>
+                    <p class="text-gray-600 mb-4">
+                        We are dedicated to uplifting the youth by offering mentorship programs, career guidance, and skill-building workshops to ensure their success.
+                    </p>
+                </div>
+
+                <!-- CSR Program 2 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-section">
+                    <h4 class="text-2xl font-semibold text-teal-600 mb-2">Health & Well-being</h4>
+                    <p class="text-gray-600 mb-4">
+                        QuantumQuill advocates for a healthier society by supporting wellness initiatives, mental health awareness, and providing resources for community health programs.
+                    </p>
+                </div>
+
+                <!-- CSR Program 3 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all card-section">
+                    <h4 class="text-2xl font-semibold text-teal-600 mb-2">Sustainability Practices</h4>
+                    <p class="text-gray-600 mb-4">
+                        Our sustainable business practices involve reducing waste, adopting green technologies, and working with partners who share our commitment to environmental protection.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center mt-16 relative">
+            <div class="parallax">
+                <h3 class="text-3xl font-bold mb-8">Get Involved</h3>
+                <p class="text-gray-600 text-lg mb-4">Join QuantumQuill in making a lasting impact on society. Whether through volunteering, supporting initiatives, or becoming a part of our team, there are many ways to contribute to our CSR vision.</p>
+                <a href="/careers" class="bg-teal-600 text-white px-6 py-3 rounded-lg text-center btn-hover transition-all">Explore Careers</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animations
+        const fadeSections = document.querySelectorAll('.fade-in');
+        const slideUpSections = document.querySelectorAll('.slide-up');
+        const zoomInSections = document.querySelectorAll('.zoom-in');
+        const cardSections = document.querySelectorAll('.card-section');
+
+        const animateOnScroll = () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            // Fade In
+            fadeSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+
+            // Slide Up
+            slideUpSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+
+            // Zoom In
+            zoomInSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+
+            // Card Section
+            cardSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Initial check to fade in sections on page load
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumQuill - {% block title %}{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* General Navigation Styles */
+        nav {
+            background-color: #013B60; /* Indigo background */
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: flex-end; /* Align links to the right */
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            position: relative;
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #c7d2fe; /* Light Indigo */
+            transform: scale(1.05);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul li a.active {
+            color: #c7d2fe;
+            font-weight: bold;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            opacity: 0;
+            transform: translateY(-10px);
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 250px;
+            background: white;
+            color: #4f46e5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px 0;
+            z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown.open {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #4f46e5;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown a:hover {
+            background: #e0e7ff; /* Light Indigo background */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <nav class="py-4" role="navigation">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold flex items-center">
+                <!-- Logo image -->
+                <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731329326/IMG-20241111-WA0032_1_-removebg-preview_solkgw.png" alt="QuantumQuill Logo" class="w-30 h-10 mr-3" loading="lazy"> 
+            </a>
+            <ul>
+                <!-- About Dropdown -->
+                <li>
+                    <a href="#" id="about-btn" aria-haspopup="true" aria-expanded="false">About</a>
+                    <div id="about-dropdown" class="dropdown">
+                        <a href="/about/who-we-are">Who We Are</a>
+                        <a href="/about/management-and-governance">Management & Governance</a>
+                        <a href="/about/environment-social-governance">Environment, Social & Governance</a>
+                        <a href="/about/corporate-social-responsibility">Corporate Social Responsibility</a>
+                        <a href="/about/transforming-sports">Transforming Sports</a>
+                        <a href="/about/technology-partners">Technology Partners</a>
+                        <a href="/about/locations">Locations</a>
+                    </div>
+                </li>
+
+                <!-- Careers Dropdown -->
+                <li>
+                    <a href="#" id="careers-btn" aria-haspopup="true" aria-expanded="false">Careers</a>
+                    <div id="careers-dropdown" class="dropdown">
+                        <a href="/careers">Open Positions</a>
+                        <a href="/careers/why-join">Why Join Us</a>
+                        <a href="/careers/life-at-quantumquill">Life at QuantumQuill</a>
+                        <a href="/careers/meet-our-people">Meet Our People</a>
+                        <a href="/careers/career-paths">Career Paths</a>
+                        <a href="/careers/join-us">Join Us</a>
+                    </div>
+                </li>
+
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">QuantumQuill</h3>
+                    <p>Empowering innovation through technology</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/careers" class="hover:text-indigo-300">Careers</a></li>
+                        <li><a href="/about" class="hover:text-indigo-300">About Us</a></li>
+                        <li><a href="/culture" class="hover:text-indigo-300">Our Culture</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p>careers@quantumquill.com</p>
+                    <p>1-800-QUANTUM</p>
+                    <div class="flex space-x-4 mt-4">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/quantumquill_infotech/" target="_blank" class="hover:text-indigo-300">
+                            <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <!-- SVG Path here -->
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/QuantumQuill" target="_blank" class="hover:text-indigo-300">
+                            <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <!-- SVG Path here -->
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle dropdown visibility and update ARIA attribute
+        function toggleDropdown(btnId, dropdownId) {
+            const button = document.getElementById(btnId);
+            const dropdown = document.getElementById(dropdownId);
+
+            button.addEventListener('click', () => {
+                dropdown.classList.toggle('open');
+                const isOpen = dropdown.classList.contains('open');
+                button.setAttribute('aria-expanded', isOpen);
+            });
+        }
+
+        toggleDropdown('about-btn', 'about-dropdown');
+        toggleDropdown('careers-btn', 'careers-dropdown');
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach((dropdown) => {
+                if (!dropdown.contains(event.target) && !dropdown.previousElementSibling.contains(event.target)) {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+
+        // Close dropdown on Escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.dropdown.open').forEach((dropdown) => dropdown.classList.remove('open'));
+            }
+        });
+    </script>
+</body>
+</html>

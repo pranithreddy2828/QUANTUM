@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Locations - QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Fade-In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Zoom-In Effect */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .zoom-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hover effect for location cards */
+        .location-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .location-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .location-card:hover img {
+            opacity: 1;
+        }
+
+        .location-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-card:hover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+            opacity: 0.5;
+        }
+
+        /* Sticky Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--header-bg, #4f46e5);
+        }
+
+        /* Dark Mode */
+        :root {
+            --header-bg: #4f46e5;
+            --bg-color: #f9fafb;
+            --text-color: #1a202c;
+        }
+
+        [data-theme="dark"] {
+            --header-bg: #1a202c;
+            --bg-color: #2d3748;
+            --text-color: #f7fafc;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #a0aec0;
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #4a5568;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="themeToggle" class="absolute top-4 right-4 bg-indigo-600 text-white py-2 px-4 rounded-md shadow-md">
+        Toggle Dark Mode
+    </button>
+
+    <!-- Header -->
+    <header class="text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold">Our Locations</h1>
+            <p class="mt-2 text-lg">We're global, with offices that span the globe, bringing our vision to life.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <section class="fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Global Presence</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Example Location Card -->
+                <div class="location-card bg-white p-8 rounded-lg shadow-xl transition-all">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-4">New York</h3>
+                    <p class="text-gray-600 mb-4">Our flagship office located in the heart of New York City. A hub for innovation and strategy development.</p>
+                    <button class="mt-2 bg-indigo-600 text-white py-2 px-4 rounded-md">Visit Office</button>
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731757921/pexels-nout-gons-80280-378570_jmkm2r.jpg" alt="Aerial view of New York City skyline" loading="lazy" />
+                </div>
+                <!-- London -->
+<div class="location-card bg-white p-8 rounded-lg shadow-xl transition-all">
+    <h3 class="text-2xl font-semibold text-indigo-600 mb-4">London</h3>
+    <p class="text-gray-600 mb-4">Our UK office focuses on global partnerships and expanding our reach across Europe.</p>
+    <button class="mt-2 bg-indigo-600 text-white py-2 px-4 rounded-md">Visit Office</button>
+    <img src="https://example.com/london.jpg" alt="London cityscape at night" loading="lazy" />
+</div>
+
+<!-- Tokyo -->
+<div class="location-card bg-white p-8 rounded-lg shadow-xl transition-all">
+    <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Tokyo</h3>
+    <p class="text-gray-600 mb-4">Our Asian office, where we collaborate with tech giants and innovative companies in the sports tech industry.</p>
+    <button class="mt-2 bg-indigo-600 text-white py-2 px-4 rounded-md">Visit Office</button>
+    <img src="https://example.com/tokyo.jpg" alt="Tokyo's skyline with Mount Fuji in the background" loading="lazy" />
+</div>
+
+<!-- Berlin -->
+<div class="location-card bg-white p-8 rounded-lg shadow-xl transition-all">
+    <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Berlin</h3>
+    <p class="text-gray-600 mb-4">Our German office is a center for cutting-edge technology development, focusing on AI and machine learning applications in sports.</p>
+    <button class="mt-2 bg-indigo-600 text-white py-2 px-4 rounded-md">Visit Office</button>
+    <img src="https://example.com/berlin.jpg" alt="Berlin's iconic Brandenburg Gate" loading="lazy" />
+</div>
+
+                <!-- Additional Locations (London, Tokyo, etc.) -->
+                <!-- Repeat similar structure with unique animations per city -->
+            </div>
+        </section>
+
+        <!-- Location Map Section -->
+        <section class="zoom-in mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Interactive Location Map</h2>
+            <div class="bg-white p-8 rounded-lg shadow-xl">
+                <p class="text-lg text-gray-600 mb-4">Explore all our global locations in this interactive map. Get more information on each office, view photos, and find out how to get in touch with our teams worldwide.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5641487037264!2d78.55783667611938!3d17.36374798112824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99913a9e765b%3A0x7fc01ae28a5be2b2!2s9H75%2B56F%2C%20Rd%20Number%201A%2C%20Sai%20Nagar%2C%20Nagole%2C%20Hyderabad%2C%20Telangana%20500068!5e0!3m2!1sen!2sin!4v1697887161482!5m2!1sen!2sin"
+                width="100%" height="500" class="rounded-lg shadow-md" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // Fade-in and Zoom-in animations
+        const fadeSections = document.querySelectorAll('.fade-in');
+        const zoomSections = document.querySelectorAll('.zoom-in');
+
+        const handleScroll = () => {
+            fadeSections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+            zoomSections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.dataset.theme =
+                document.body.dataset.theme === 'dark' ? '' : 'dark';
+        });
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    </script>
+</body>
+
+</html>

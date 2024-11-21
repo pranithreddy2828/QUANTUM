@@ -1,0 +1,73 @@
+/* General Navigation Styles */
+nav {
+    background-color: #4f46e5; /* Indigo background */
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c7d2fe; /* Light Indigo */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: white;
+    color: #4f46e5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #4f46e5;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.dropdown a:hover {
+    background: #e0e7ff; /* Light Indigo background */
+}
+
+/* Dropdown Animation */
+.dropdown.open {
+    display: block;
+    animation: dropdownFadeIn 0.3s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

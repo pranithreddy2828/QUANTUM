@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Join Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Fade-in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* For interactive hover effect */
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.8s ease forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <header class="bg-indigo-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold animate-fade-in">Why Join Us</h1>
+            <p class="mt-2 text-lg">Discover why QuantumQuill is the perfect place to grow your career.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Introduction Section -->
+        <section class="mb-16 fade-in">
+            <h3 class="text-3xl font-bold text-center mb-8">Our Commitment to You</h3>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto">
+                At QuantumQuill, we are dedicated to creating an environment where you can thrive, innovate, and make an impact. Joining us means becoming part of a team that values your skills, supports your growth, and celebrates your successes.
+            </p>
+        </section>
+
+        <!-- Perks and Benefits Section -->
+        <section class="mb-16 fade-in">
+            <h3 class="text-3xl font-bold text-center mb-8">Perks and Benefits</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h4 class="text-xl font-bold mb-4">Comprehensive Healthcare</h4>
+                    <p class="text-gray-600">
+                        Enjoy top-tier medical, dental, and vision coverage for you and your family.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h4 class="text-xl font-bold mb-4">Flexible Work Options</h4>
+                    <p class="text-gray-600">
+                        We support remote work, flexible hours, and a healthy work-life balance.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h4 class="text-xl font-bold mb-4">Learning and Development</h4>
+                    <p class="text-gray-600">
+                        Access training programs, mentorship opportunities, and career development paths.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h4 class="text-xl font-bold mb-4">Generous Time Off</h4>
+                    <p class="text-gray-600">
+                        Recharge with ample vacation time, holidays, and wellness days.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h4 class="text-xl font-bold mb-4">Inclusive Culture</h4>
+                    <p class="text-gray-600">
+                        Join a workplace that values diversity, equity, and inclusion at its core.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h4 class="text-xl font-bold mb-4">Recognition and Rewards</h4>
+                    <p class="text-gray-600">
+                        Celebrate your accomplishments with regular recognition and exciting rewards.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growth Opportunities Section -->
+        <section class="mb-16 fade-in">
+            <h3 class="text-3xl font-bold text-center mb-8">Grow with Us</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731414877/jud-mackrill-Of_m3hMsoAA-unsplash_tgtmfo.jpg" alt="Growth Opportunities" class="rounded-lg">
+                </div>
+                <div>
+                    <p class="text-gray-600 text-lg mb-4">
+                        At QuantumQuill, your career journey is a priority. Whether you're just starting out or are a seasoned professional, we provide opportunities to grow, learn, and excel in your field.
+                    </p>
+                    <p class="text-gray-600">
+                        Our mentorship programs, industry-leading projects, and supportive environment ensure that you're always moving forward.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center fade-in">
+            <h3 class="text-3xl font-bold mb-8">Ready to Join?</h3>
+            <p class="text-gray-600 text-lg mb-4">
+                Be part of a team that values innovation, collaboration, and making an impact.
+            </p>
+            <a href="/apply" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">Explore Opportunities</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const fadeSections = document.querySelectorAll('.fade-in');
+
+        const fadeOnScroll = () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            fadeSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeOnScroll);
+        fadeOnScroll(); // Initial check to fade in sections on page load
+    </script>
+</body>
+</html>

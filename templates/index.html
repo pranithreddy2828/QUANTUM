@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<div class="bg-indigo-700 text-white py-20" style="height:70vh">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold mb-6">Join Our Innovation Journey</h1>
+        <p class="text-xl mb-8">Shape the future of technology with QuantumQuill</p>
+        <a href="/careers" class="bg-white text-indigo-700 px-8 py-3 rounded-full font-bold hover:bg-indigo-100">
+            View Open Positions
+        </a>
+    </div>
+</div>
+
+<div class="container mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+            <h3 class="text-2xl font-bold mb-4">Innovation First</h3>
+            <p>We're pushing the boundaries of what's possible in technology</p>
+        </div>
+        <div class="text-center">
+            <h3 class="text-2xl font-bold mb-4">Growing Together</h3>
+            <p>Continuous learning and development opportunities</p>
+        </div>
+        <div class="text-center">
+            <h3 class="text-2xl font-bold mb-4">Global Impact</h3>
+            <p>Work on projects that make a difference worldwide</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforming Sports - QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Card Hover Effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Fade-In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Slide-Up Animation */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Zoom-In Animation */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .zoom-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Animation for Section */
+        @keyframes fade-in-section {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-section {
+            animation: fade-in-section 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-indigo-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold animate-section">Transforming Sports</h1>
+            <p class="mt-2 text-lg">Redefining the future of sports through innovation, technology, and sustainability.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Introduction Section -->
+        <section class="fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Vision for Sports</h2>
+            <div class="flex flex-col md:flex-row bg-white p-8 rounded-lg shadow-lg">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="https://via.placeholder.com/400x300" alt="Sports Vision" class="rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 md:pl-8">
+                    <p class="text-lg text-gray-600 mb-4">
+                        At QuantumQuill, we believe that sports have the power to unite communities, inspire individuals, and create opportunities. Our goal is to use cutting-edge technology, innovation, and sustainable practices to transform the world of sports for athletes, fans, and organizations alike.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4">
+                        From enhancing athlete performance through data analytics to revolutionizing fan experiences with immersive technologies, we are at the forefront of the sports transformation movement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Areas of Impact Section -->
+        <section class="slide-up mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Key Areas of Transformation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <img src="https://via.placeholder.com/400x300" alt="Data Analytics" class="mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold text-indigo-600 mb-2">Data Analytics for Performance</h4>
+                    <p class="text-gray-600 mb-4">
+                        Our state-of-the-art data analytics solutions provide insights into athlete performance, injury prevention, and training optimization, helping athletes reach their full potential.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <img src="https://via.placeholder.com/400x300" alt="Fan Engagement" class="mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold text-indigo-600 mb-2">Fan Engagement & Experience</h4>
+                    <p class="text-gray-600 mb-4">
+                        QuantumQuill leverages immersive technologies like AR and VR to enhance fan engagement, creating unparalleled sports experiences both at the venue and virtually.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <img src="https://via.placeholder.com/400x300" alt="Sustainability" class="mb-4 rounded-lg">
+                    <h4 class="text-2xl font-semibold text-indigo-600 mb-2">Sustainability in Sports</h4>
+                    <p class="text-gray-600 mb-4">
+                        We're dedicated to promoting sustainability in sports by adopting eco-friendly practices, reducing carbon footprints, and encouraging organizations to implement green initiatives.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+      <!-- Technology & Innovation Section -->
+<section class="fade-in mt-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Technological Innovations</h2>
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+        <p class="text-lg text-gray-600 mb-4">
+            At QuantumQuill, technology is at the core of everything we do in sports. Our team works tirelessly to bring innovations to the sports world that enhance both the athlete’s performance and the fan’s experience.
+        </p>
+        <ul class="list-disc pl-6 text-lg text-gray-600 mb-4">
+            
+        </ul>
+        <p class="text-lg text-gray-600 mb-4">
+            We aim to break the boundaries of what's possible and create a future where technology and sports work hand-in-hand.
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <!-- Image 1 with Hover Content and Blur Effect -->
+            <div class="relative rounded-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/400x300" alt="Artificial Intelligence" class="w-full h-full object-cover rounded-lg shadow-md transition-all duration-300 group-hover:blur-lg">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center bg-black bg-opacity-50 transition-all duration-300">
+                    <p class="text-center text-lg font-semibold text-white">Artificial Intelligence (AI) helps optimize athlete performance and training using data-driven insights.</p>
+                </div>
+                <p class="mt-2 text-center text-gray-600">Artificial Intelligence (AI)</p>
+            </div>
+
+            <!-- Image 2 with Hover Content and Blur Effect -->
+            <div class="relative rounded-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/400x300" alt="Virtual Reality" class="w-full h-full object-cover rounded-lg shadow-md transition-all duration-300 group-hover:blur-lg">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center bg-black bg-opacity-50 transition-all duration-300">
+                    <p class="text-center text-lg font-semibold text-white">Virtual Reality (VR) offers immersive experiences for fans and enhances training environments for athletes.</p>
+                </div>
+                <p class="mt-2 text-center text-gray-600">Virtual Reality (VR)</p>
+            </div>
+
+            <!-- Image 3 with Hover Content and Blur Effect -->
+            <div class="relative rounded-lg overflow-hidden group">
+                <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731314804/samples/animals/three-dogs.jpg" alt="Augmented Reality" class="w-full h-full object-cover rounded-lg shadow-md transition-all duration-300 group-hover:blur-lg">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center bg-black bg-opacity-50 transition-all duration-300">
+                    <p class="text-center text-lg font-semibold text-white">Augmented Reality (AR) enhances fan engagement by blending real-world events with digital experiences.</p>
+                </div>
+                <p class="mt-2 text-center text-gray-600">Augmented Reality (AR)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center mt-16">
+            <h3 class="text-3xl font-bold mb-8">Join Us in Transforming Sports</h3>
+            <p class="text-gray-600 text-lg mb-4">Be a part of the movement that is changing the future of sports. Whether you're an athlete, a fan, or a partner, there are countless ways to get involved in the transformation.</p>
+            <a href="/careers" class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-center hover:bg-indigo-700 transition-all">Explore Careers</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const fadeSections = document.querySelectorAll('.fade-in');
+        const slideUpSections = document.querySelectorAll('.slide-up');
+
+        const handleScroll = () => {
+            fadeSections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+
+            slideUpSections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Call on page load to trigger animations
+    </script>
+
+</body>
+</html>

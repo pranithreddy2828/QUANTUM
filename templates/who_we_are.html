@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Card Hover Effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Circular Styling */
+        .card {
+            width: 400px; /* Fixed width for a circular look */
+            height: 300px; /* Fixed height for a circular look */
+            padding: 20px;
+            border-radius: 50%; /* Makes the card circular */
+            transition: all 0.5s ease;
+        }
+
+        /* Fade-In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Slide-Up Animation */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Zoom-In Animation */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .zoom-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Animation for Section */
+        @keyframes fade-in-section {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-section {
+            animation: fade-in-section 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-indigo-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold animate-section">Who We Are</h1>
+            <p class="mt-2 text-lg">Learn about QuantumQuill, our mission, and what drives us to innovate.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- About Us Section -->
+        <section class="fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Mission</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+               <!-- Mission Card -->
+<div class="card shadow-lg hover:shadow-xl flex items-center justify-center flex-col"
+style="background: linear-gradient(135deg, #003366, #004080, #006600, #00b300); color: white; border-radius: 50%; padding: 20px; text-align: center;">
+<h4 class="text-xl font-semibold font-bold mb-2">Innovation at Our Core</h4>
+<p>
+    At QuantumQuill, we are committed to driving technological advancements that push boundaries and create meaningful change.
+</p>
+</div>
+
+<!-- Vision Card -->
+<div class="card shadow-lg hover:shadow-xl flex items-center justify-center flex-col"
+style="background: linear-gradient(135deg, #003366, #004080, #006600, #00b300); color: white; border-radius: 50%; padding: 20px; text-align: center;">
+<h4 class="text-xl font-semibold font-bold mb-2">Vision for the Future</h4>
+<p>
+    We envision a future where our cutting-edge solutions improve lives, enhance businesses, and contribute to a sustainable world.
+</p>
+</div>
+
+<!-- Values Card -->
+<div class="card shadow-lg hover:shadow-xl flex items-center justify-center flex-col"
+style="background: linear-gradient(135deg, #003366, #004080, #006600, #00b300); color: white; border-radius: 50%; padding: 20px; text-align: center;">
+<h4 class="text-xl font-semibold font-bold mb-2">Our Values</h4>
+<p>
+    Integrity, excellence, and collaboration are the pillars that guide everything we do, fostering a culture of respect and innovation.
+</p>
+</div>
+
+            </div>
+        </section>
+
+       <!-- Company Story Section -->
+<section class="fade-in mt-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Our Story</h2>
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+        <!-- Add an image with the blur effect on hover -->
+        <div class="relative mb-8">
+            <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731314805/samples/landscapes/landscape-panorama.jpg" alt="Our Story Image" class="w-full h-70 object-cover rounded-lg transition duration-300 ease-in-out transform hover:scale-105 hover:blur-sm">
+            <!-- Optional overlay to make the text stand out more if needed -->
+            <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+        </div>
+
+        <p class="text-lg text-gray-600 mb-4">
+            QuantumQuill was founded with a simple goal: to use technology to empower individuals and organizations to achieve their fullest potential. Over the years, we have grown into a leader in the tech industry, with a team of dedicated experts working tirelessly to bring our vision to life.
+        </p>
+        <p class="text-lg text-gray-600 mb-4">
+            We believe in creating long-lasting impact by blending innovation with purpose. Our solutions are designed to help our clients stay ahead of the curve, transforming industries and setting new standards for the future.
+        </p>
+        <p class="text-lg text-gray-600 mb-4">
+            With every step we take, we are shaping the future of technology and the way people interact with the world. Join us as we continue to revolutionize the industry.
+        </p>
+    </div>
+</section>
+
+
+       <!-- Why We Matter Section -->
+<section class="bg-gradient-to-r from-indigo-600 to-indigo-900 text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Why We Matter</h2>
+            <p class="text-xl mb-4">QuantumQuill isn’t just about technology; it’s about creating a lasting impact. Discover how we transform industries and improve lives.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Card 1: Empowerment -->
+            <div class="bg-white text-indigo-600 rounded-xl p-8 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <div class="mb-6">
+                    <!-- Empowerment Icon: User -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-16 w-16 text-indigo-600 mx-auto" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2">
+                        <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Empowering Individuals</h3>
+                <p class="text-gray-700">We create solutions that empower individuals to achieve their goals, unlocking their full potential through technology and innovation.</p>
+            </div>
+
+            <!-- Card 2: Industry Transformation -->
+            <div class="bg-white text-indigo-600 rounded-xl p-8 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <div class="mb-6">
+                    <!-- Industry Transformation Icon: Gear -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-16 w-16 text-indigo-600 mx-auto" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2">
+                        <path d="M14.41 7.59a1 1 0 011.42 1.42l-1.08 1.08a6.98 6.98 0 011.16 4.18l1.56-.52a1 1 0 011.23 1.23l-1.52 4.25a1 1 0 01-1.25.62l-1.72-.57a7.02 7.02 0 01-2.3.52 7 7 0 01-2.3-.52l-1.72.57a1 1 0 01-1.25-.62l-1.52-4.25a1 1 0 011.23-1.23l1.56.52a6.98 6.98 0 011.16-4.18l-1.08-1.08a1 1 0 011.42-1.42L10 2a1 1 0 011.42 0l3.99 3.59z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Transforming Industries</h3>
+                <p class="text-gray-700">Our solutions revolutionize industries by driving efficiency, fostering innovation, and pushing the boundaries of what’s possible.</p>
+            </div>
+
+            <!-- Card 3: Social Impact -->
+            <div class="bg-white text-indigo-600 rounded-xl p-8 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <div class="mb-6">
+                    <!-- Impacting Society Icon: Globe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-16 w-16 text-indigo-600 mx-auto" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2">
+                        <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Impacting Society</h3>
+                <p class="text-gray-700">We believe in the power of technology to solve real-world problems, improving lives and creating a better, more sustainable world for future generations.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <p class="text-lg mb-4">We’re not just a company, we’re a movement. Together, we can shape the future.</p>
+            <a href="/about" class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-indigo-700 transition-all">Learn More About Us</a>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Call to Action Section -->
+        <section class="text-center mt-16">
+            <h3 class="text-3xl font-bold mb-8">Ready to Join Us?</h3>
+            <p class="text-gray-600 text-lg mb-4">At QuantumQuill, we believe in collaboration, growth, and making an impact. Join us as we work towards building a brighter future with technology.</p>
+            <a href="/careers" class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-center hover:bg-indigo-700 transition-all">Explore Careers</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const fadeSections = document.querySelectorAll('.fade-in');
+        const slideUpSections = document.querySelectorAll('.slide-up');
+        const zoomInSections = document.querySelectorAll('.zoom-in');
+
+        const animateOnScroll = () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            // Fade In
+            fadeSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+
+            // Slide Up
+            slideUpSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+
+            // Zoom In
+            zoomInSections.forEach(section => {
+                if (section.offsetTop < scrollPosition - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Initial check to fade in sections on page load
+    </script>
+</body>
+</html>

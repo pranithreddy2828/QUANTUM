@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Collaboration - QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Image blur effect */
+        .team-image {
+            transition: all 0.3s ease;
+        }
+        .team-image:hover {
+            filter: blur(5px);
+            transform: scale(1.05);
+        }
+
+        /* Card Hover Effect */
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold">Team Collaboration</h1>
+            <p class="mt-2 text-lg">Meet the incredible minds behind QuantumQuill. Together, we innovate and collaborate to create groundbreaking solutions.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Team Collaboration Section -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-8">Our Collaborative Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white shadow-lg hover:shadow-xl flex flex-col items-center p-6 rounded-lg">
+                    <div class="relative mb-6">
+                        <img src="https://via.placeholder.com/200" alt="Team Member 1" class="team-image rounded-full w-32 h-32 object-cover mx-auto">
+                    </div>
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">John Doe</h4>
+                    <p class="text-gray-600 text-center">Lead Software Engineer</p>
+                    <p class="text-gray-500 text-center mt-4">John is the backbone of our technical team, driving innovation and overseeing the development of core technologies.</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white shadow-lg hover:shadow-xl flex flex-col items-center p-6 rounded-lg">
+                    <div class="relative mb-6">
+                        <img src="https://via.placeholder.com/200" alt="Team Member 2" class="team-image rounded-full w-32 h-32 object-cover mx-auto">
+                    </div>
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Jane Smith</h4>
+                    <p class="text-gray-600 text-center">Product Manager</p>
+                    <p class="text-gray-500 text-center mt-4">Jane ensures that every project aligns with our company's vision, leading cross-functional teams to deliver successful products.</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white shadow-lg hover:shadow-xl flex flex-col items-center p-6 rounded-lg">
+                    <div class="relative mb-6">
+                        <img src="https://via.placeholder.com/200" alt="Team Member 3" class="team-image rounded-full w-32 h-32 object-cover mx-auto">
+                    </div>
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Alex Johnson</h4>
+                    <p class="text-gray-600 text-center">UI/UX Designer</p>
+                    <p class="text-gray-500 text-center mt-4">Alex designs intuitive interfaces that enhance user experience, ensuring that our products are not only functional but also beautiful.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Collaboration Environment Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Collaborative Work Culture</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-lg text-gray-600 mb-4">
+                    At QuantumQuill, we believe in the power of collaboration. Our team works together in an open and transparent environment where ideas flow freely. We empower our team members to be creative and innovative, ensuring that every voice is heard and every contribution is valued.
+                </p>
+                <p class="text-lg text-gray-600 mb-4">
+                    Collaboration isn't just a part of our process—it's at the heart of our success. From daily brainstorming sessions to cross-department collaboration, we are committed to fostering an inclusive environment where everyone can thrive and contribute to our shared goals.
+                </p>
+                <p class="text-lg text-gray-600 mb-4">
+                    With cutting-edge tools and a flexible, supportive atmosphere, we aim to bring out the best in our team members, enabling them to work on projects that make a difference.
+                </p>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center mt-16">
+            <h3 class="text-3xl font-bold mb-8">Join Our Team</h3>
+            <p class="text-gray-600 text-lg mb-4">Are you passionate about technology and collaboration? Join us in revolutionizing the future of tech!</p>
+            <a href="/careers" class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-center hover:bg-indigo-700 transition-all">Explore Careers</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Image Hover Effect
+        const teamImages = document.querySelectorAll('.team-image');
+
+        teamImages.forEach(image => {
+            image.addEventListener('mouseover', () => {
+                image.style.transition = 'filter 0.3s ease, transform 0.3s ease';
+                image.style.filter = 'blur(5px)';
+                image.style.transform = 'scale(1.05)';
+            });
+
+            image.addEventListener('mouseout', () => {
+                image.style.filter = 'none';
+                image.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

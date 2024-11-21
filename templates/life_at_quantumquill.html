@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life at QuantumQuill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Animations */
+        .animate-slide-in {
+            animation: slide-in 0.8s ease-out;
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fade-up 0.8s ease-out;
+        }
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hover Effects for Images */
+        .hover-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-effect img {
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .hover-effect:hover img {
+            transform: scale(1.1);
+            filter: brightness(70%);
+        }
+
+        .hover-effect .info-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hover-effect:hover .info-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold">Life at QuantumQuill</h1>
+            <p class="mt-2 text-lg">Experience a vibrant culture and collaborative work environment.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Section: What Our Teams Say -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 animate-slide-in">What Our Teams Say</h2>
+            <p class="text-center text-gray-700">Hear from our amazing team members about their journey at QuantumQuill.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform animate-fade-up">
+                    <h4 class="text-xl font-bold mb-2">"Inspiring Environment"</h4>
+                    <p class="text-gray-700">"The culture here fosters innovation and collaboration. It’s a pleasure to come to work every day!"</p>
+                    <p class="text-indigo-600 font-semibold mt-4">- Alex, Software Engineer</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform animate-fade-up">
+                    <h4 class="text-xl font-bold mb-2">"Growth Opportunities"</h4>
+                    <p class="text-gray-700">"QuantumQuill has provided me with opportunities to grow and learn that I couldn’t have imagined."</p>
+                    <p class="text-indigo-600 font-semibold mt-4">- Maya, Data Analyst</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform animate-fade-up">
+                    <h4 class="text-xl font-bold mb-2">"Supportive Team"</h4>
+                    <p class="text-gray-700">"The team here is incredibly supportive and collaborative, making it a joy to work together."</p>
+                    <p class="text-indigo-600 font-semibold mt-4">- Liam, Product Manager</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: A View from the Inside -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 animate-slide-in">A View from the Inside</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Image Cards -->
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731473580/team_collab_rbku7b.jpg" alt="Team Collaboration" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Team Collaboration</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Team Collaboration</h3>
+                        <p class="text-gray-700 mt-2">Our teams work together seamlessly to create outstanding results.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731473755/collab_ssg3c6.jpg" alt="Creative Workspace" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Creative Workspace</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Creative Workspace</h3>
+                        <p class="text-gray-700 mt-2">Explore our inspiring workspaces designed to boost creativity.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731473907/meeting_lhd0ae.jpg" alt="Innovative Meetings" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Innovative Meetings</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Innovative Meetings</h3>
+                        <p class="text-gray-700 mt-2">Our brainstorming sessions drive innovation and progress.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731474381/relax_d4xspt.jpg" alt="Relaxing Spaces" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Relaxing Spaces</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Relaxing Spaces</h3>
+                        <p class="text-gray-700 mt-2">Take a break in our thoughtfully designed relaxation areas.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731474490/celebration_vmpfjy.jpg" alt="Celebrating Wins" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Celebrating Wins</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Celebrating Wins</h3>
+                        <p class="text-gray-700 mt-2">We celebrate every success together as a team.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731474767/hack_j8zmkc.jpg" alt="Hackathon Moments" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Hackathon Moments</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Hackathon Moments</h3>
+                        <p class="text-gray-700 mt-2">Watch our teams innovate during high-energy hackathons.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731474928/learn_toge_rmaq70.jpg" alt="Learning Together" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Learning Together</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Learning Together</h3>
+                        <p class="text-gray-700 mt-2">We encourage continuous learning through shared experiences.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731475055/commuinity_invo_mdkutu.jpg" alt="Community Involvement" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Community Involvement</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Community Involvement</h3>
+                        <p class="text-gray-700 mt-2">Engaging with the community is at the heart of what we do.</p>
+                    </div>
+                </div>
+                <div class="hover-effect bg-white rounded-lg shadow-lg">
+                    <img src="https://res.cloudinary.com/daj3h8fz7/image/upload/v1731475143/discussion_uyhmx3.jpg" alt="Dynamic Discussions" class="w-full h-56 object-cover rounded-t-lg">
+                    <div class="info-overlay">
+                        <p class="text-lg font-semibold">Dynamic Discussions</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Dynamic Discussions</h3>
+                        <p class="text-gray-700 mt-2">Dive into thought-provoking discussions during meetings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 QuantumQuill. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
